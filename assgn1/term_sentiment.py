@@ -2,6 +2,18 @@ import sys
 import json
 import re
 
+# Generates a sentiment for each term which is not defined in pre-defined sentiment file
+# To Run:
+# python term_sentiment <sentiment_file> <tweet_file> 
+# this script parses a tweet_file which contains list of tweets and assigns sentiment to each term 
+# using following alogrithm:-
+
+# Parse sentiment file and create a dictionary of <words, sentiment>
+# For each tweet, compute its sentiment. For words not present in dict, assign
+# sentiment of their word as 0
+# Now for all the words which are not present in the dictionary, assign 
+# sentiment of each word as avg of sentiments of all tweets they appear in.
+
 def getNormScore(tweet, dict):
 	score = 0
 	normScore = 0

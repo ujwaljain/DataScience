@@ -1,6 +1,13 @@
 import sys
 import json
 
+# This script finds the frequency of each term occuring in a list of tweets.
+# To Run:
+# python frequency.py <tweet_file>
+# Details:
+# This generates frequency of all the terms present in tweet_file as follows:
+# term_freq = # of occurances in all the tweets/ # of terms in all the tweets.
+
 def getFrequency(tweet, freq, wordCount):
 	words = tweet.split()
 	for word in words:

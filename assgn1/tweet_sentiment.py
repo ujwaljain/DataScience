@@ -1,8 +1,13 @@
 import sys
 import json
 
-def hw():
-    print 'Hello, world!'
+# This script finds the sentiment of tweets
+# To Run:
+# python tweet_sentiment <sentiment_file> <tweet_file>
+# Details:
+# This script assigns a sentiment to a tweet on the basis of words that appear in that tweet.
+# tweet_sentiment = sum(sentiment of each word in the tweet)
+# if the word is not defined in sentiment file, then use 0 for that word.
 
 def getScore(fp, dict):
     for line in fp:
